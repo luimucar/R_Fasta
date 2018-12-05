@@ -50,6 +50,6 @@ ratio_at <- (n_anm + n_tnm)/(n_anm + n_tnm + n_gnm + n_cnm)
 cat ("#g + #c / total =",ratio_gc,'\n')
 cat ("#a + #t / total =",ratio_at,'\n')
 
-ratio = ration_gc/ration_at;
+ratio = ratio_gc/ratio_at;
 
 cat ("#g + #c / #a + #t)  =",ratio,'\n')
