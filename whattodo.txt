@@ -1,0 +1,14 @@
+find the AT and GC
+
+library(BSgenome.Dmelanogaster.UCSC.dm3)
+subject <- Dmelanogaster$chr3R
+Lpattern <- "AGCTCCGAG"
+Rpattern <- "TTGTTCACA"
+matchLRPatterns(Lpattern, Rpattern, 500, subject) # 1 match
+## Note that matchLRPatterns() will return all matches, even when they are
+## overlapping:
+subject <- DNAString("AAATTAACCCTT")
+matchLRPatterns("AA", "TT", 0, subject) # 1 match
+matchLRPatterns("AA", "TT", 1, subject) # 2 matches
+matchLRPatterns("AA", "TT", 3, subject) # 3 matches
+matchLRPatterns("AA", "TT", 7, subject) # 4 matches
